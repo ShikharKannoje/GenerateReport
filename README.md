@@ -24,7 +24,9 @@ Run `go build` to create the binary.
 4) good to run the project.
 
 ### Swagger documentation
+
 Fire the below command to Generate a spec from source
+
 swagger generate spec -o ./swagger.json
 
 
