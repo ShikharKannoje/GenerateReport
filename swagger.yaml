@@ -1,0 +1,61 @@
+consumes:
+  - application/json
+produces:
+  - application/json
+schemes:
+  - http
+  - https
+swagger: '2.0'
+info:
+  description:
+    RESTful web service to generate CSV/Excel reports.
+  title: MasterPlan csv/excel report generation Service AP
+  version: 0.1.0
+host: 'localhost:8080'
+basePath: /
+paths:
+  /:
+    get:
+      produces:
+        - application/json
+      operationId: home
+      responses:
+        '200':
+          description: Successfull
+  /getActivities:
+    get:
+      description:
+        produce the csv/excel file having all the activities of the masterplan in a csv or excel file
+      produces:
+        - text/csv
+      responses:
+        '200':
+          description: csv/excell generated
+  /getAllDetails:
+    get:
+      description:
+        produce the csv/excel file having all the deteails of activities from the masterplan in a csv or excel file
+      produces:
+        - text/csv
+      responses:
+        '200':
+          description: csv/excell generated
+  /getSortedByWBS:
+    get:
+      description:
+        produce the csv/excel file having all the activities of the masterplan sorted by WBS number in a csv or excel file
+      produces:
+        - text/csv
+      responses:
+        '200':
+          description: csv/excell generated
+  /getSortedByDatesAndWBS:
+    get:
+      description:
+        produce a sorted csv or excel file based on the start date of activities followed by the Work Breakdown Structure number in the masterplan.
+      produces:
+        - text/csv
+      responses:
+        '200':
+          description: csv/excell generated
+ 
